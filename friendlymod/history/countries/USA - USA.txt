@@ -21,6 +21,7 @@ press_rights = free_press
 trade_unions = all_trade_unions
 voting_system = first_past_the_post
 political_parties = gerrymandering
+subsidise = subsidise_no
 
 # Social Reforms
 wage_reform = trinket_wage

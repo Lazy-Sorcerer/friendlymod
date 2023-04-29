@@ -1,0 +1,13 @@
+subsidise_yes_title;Enable Subsidies;;;;;;;;;;;;;;;;;;;;;;;;;;
+subsidise_yes_desc;Click this if you want to subsidise your factories. (takes a monthly tick to have an effect);;;;;;;;;;;;;;;;;;;;;;;;;;
+subsidise_no_title;Disable Subsidies;;;;;;;;;;;;;;;;;;;;;;;;;;
+subsidise_no_desc;Click this if you don't want to subsidise your factories. (takes a monthly tick to have an effect);;;;;;;;;;;;;;;;;;;;;;;;;;
+subsidise_yes_l;Yes Subsidies;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
+subsidise_no_l;No Subsidies;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
+subsidise_no;No Subsidies;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
+subsidise_yes;Subsidies;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
+subsidise;Subsidise;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
+subsidise_no_1;No Subsidies;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
+subsidise_yes_1;Yes Subsidies;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
+movement_subsidise_no;Movement for No Subsidies;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
+movement_subsidise_yes;Movement for Subsidies;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
