@@ -1,6 +1,7 @@
 political_decisions = {
     subsidise_no = {
-	    potential = {
+	    alert = no
+		potential = {
 		    ai = no
 			civilized = yes
 			OR = {
@@ -19,7 +20,8 @@ political_decisions = {
 		ai_will_do = { factor = 0 }
     }
 	subsidise_yes = {
-	    potential = {
+	    alert = no
+		potential = {
 		    ai = no
 			civilized = yes
 			OR = {
