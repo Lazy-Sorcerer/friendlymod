@@ -2,3 +2,4 @@
 * Imported crimeamod defines.lua and ban on ai subsidies
 * Modified trade, economic and war policies
 * Added a Negotiated Transfer casus belli
+* Created a settings.txt file
