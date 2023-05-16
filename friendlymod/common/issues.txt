@@ -133,20 +133,17 @@ party_issues = {
 
 	citizenship_policy = {
 		residency = {
-			rules = { primary_culture_voting = yes }
 			non_accepted_pop_consciousness_modifier = 0.01
 		}
 		limited_citizenship = {
-			rules = { culture_voting = yes }
 			global_assimilation_rate = 0.075
 		}
 		full_citizenship = {
-			rules = { all_voting = yes }
 			non_accepted_pop_militancy_modifier = -0.01
 			global_assimilation_rate = 0.15
 		}
 	}
-	
+
 	war_policy = {
 		jingoism = {
 			max_military_spending = 1.0
@@ -159,7 +156,7 @@ party_issues = {
 			reinforce_speed = 0.5
 		}
 		pro_military = {
-			max_military_spending = 1.0
+			max_military_spending = 0.91
 			war_exhaustion_effect = 0.7
 			cb_generation_speed_modifier = 0.15
 			mobilization_impact = 3
@@ -167,7 +164,7 @@ party_issues = {
 			reinforce_speed = 0.25
 		}
 		anti_military = {
-			max_military_spending = 0.75
+			max_military_spending = 0.81
 			supply_consumption = -0.125
 			war_exhaustion_effect = 1.1
 			cb_generation_speed_modifier = -0.15
@@ -176,7 +173,7 @@ party_issues = {
 			reinforce_speed = -0.25
 		}
 		pacifism = {
-			max_military_spending = 0.5
+			max_military_spending = 0.71
 			supply_consumption = -0.2
 			war_exhaustion_effect = 1.2
 			cb_generation_speed_modifier = -0.3
@@ -252,7 +249,7 @@ political_reforms = {
 		}
 		universal_weighted_voting = {
 			rich_vote = 3
-			middle_vote = 2
+			middle_vote = 3
 			poor_vote = 1
 			global_immigrant_attract = 0.29
 			cb_generation_speed_modifier = -0.15
@@ -289,29 +286,32 @@ political_reforms = {
 			rules = { population_vote = yes }
 			allow = {
 				NOT = { vote_franschise = none_voting }
+				NOT = { has_country_flag = the_slavery_debate }
 			}
 			global_immigrant_attract = 0.03
 		}
 	}
 
-	voting_system = {
+   voting_system = {
 		first_past_the_post = {
 			rules = { largest_share = yes }
-			allow = { 
+			allow = {
 				NOT = { vote_franschise = none_voting }
 			}
 		}
 		jefferson_method = {
 			rules = { dhont = yes }
-			allow = { 
+			allow = {
 				NOT = { vote_franschise = none_voting }
+				NOT = { has_country_flag = the_slavery_debate }
 			}
 		}
 		proportional_representation = {
 			rules = { sainte_laque = yes }
-			allow = { 
+			allow = {
 				NOT = { vote_franschise = none_voting }
-			}			
+				NOT = { has_country_flag = the_slavery_debate }
+			}
 		}
 	}
 	public_meetings = {
@@ -403,6 +403,58 @@ political_reforms = {
 			}
 		}
 	}
+
+	border_policy = {
+        closed_borders = {
+			core_pop_consciousness_modifier = 0.01
+			core_pop_militancy_modifier = 0.01
+            global_immigrant_attract = -10
+            administrative_multiplier = 6
+            allow = {
+                vote_franschise = none_voting
+                NOT = { press_rights = free_press }
+            }
+        }
+        quota_immigration = {
+        }
+        open_borders = {
+        }
+    }
+
+    debt_law = {
+        next_step_only = yes
+        serfdom = {
+			education_efficiency_modifier = -0.15
+			poor_savings_modifier = -0.5
+			global_immigrant_attract = -0.05
+			tax_efficiency = 0.05
+			mobilisation_size = 0.02
+        }
+        peonage = {
+			clr_country_flag = serfdom_not_abolished
+            education_efficiency_modifier = -0.03
+            RGO_throughput  = 0.05
+            poor_everyday_needs = 0.1
+            poor_savings_modifier = -0.25
+            allow = {
+                OR = {
+                    NOT = { has_country_flag = serfdom_not_abolished }
+                    year = 1870
+                }
+            }
+        }
+
+        debtors_prisons = {
+        }
+
+        bankruptcy = {
+            administrative_efficiency_modifier = 0.05
+            tariff_efficiency_modifier = 0.05
+            administrative_multiplier = 2
+			allow = { has_country_flag = modern_central_bank_system }
+        }
+    }
+
 	subsidise = {
 	    subsidise_yes = {
 		    rules = {can_subsidise = yes }
@@ -645,7 +697,79 @@ social_reforms = {
 			administrative_multiplier = 3
 			global_assimilation_rate = 0.1
 		}
-	}	
+	}
+	penal_system = {
+        administrative = yes
+		next_step_only = yes
+		colonial_transportation = {
+            administrative_multiplier = 1
+        }
+        capital_punishment = {
+            core_pop_militancy_modifier = -0.01
+            suppression_points_modifier = 0.25
+        }
+
+        incarceration = {
+			global_immigrant_attract = 0.01
+			global_assimilation_rate = 0.01
+			suppression_points_modifier = -0.1
+            administrative_multiplier = 1
+        }
+
+        rehabilitation = {
+            global_immigrant_attract = 0.02
+            global_assimilation_rate = 0.02
+            suppression_points_modifier = -0.2
+            administrative_multiplier = 2
+        }
+    }
+
+    child_labor = {
+        administrative = yes
+        next_step_only = yes
+        child_labor_legal = {
+            education_efficiency_modifier = -0.1
+            factory_throughput = 0.1
+            artisan_throughput = 0.1
+            RGO_throughput = 0.25
+        }
+
+        child_labor_restricted = {
+            education_efficiency_modifier = -0.03
+            poor_savings_modifier = 0.05
+            RGO_throughput = 0.05
+            artisan_throughput = 0.05
+			global_immigrant_attract = 0.02
+        }
+
+        child_labor_illegal = {
+            education_efficiency_modifier = 0.02
+            global_immigrant_attract = 0.05
+        }
+    }
+
+    citizens_rights = {
+		administrative = yes
+        next_step_only = yes
+        primary_culture_only = {
+            rules = { primary_culture_voting = yes }
+            non_accepted_pop_consciousness_modifier = 0.01
+            allow = {
+                citizenship_policy = residency
+            }
+        }
+        culture_voting_only = {
+            rules = { culture_voting = yes }
+            global_assimilation_rate = 0.1
+			global_immigrant_attract = 0.03
+        }
+        all_voting_pops = {
+            rules = { all_voting = yes }
+            non_accepted_pop_militancy_modifier = -0.01
+            global_assimilation_rate = 0.05
+            global_immigrant_attract = 0.08
+        }
+    }	
 }
 ################################
 
