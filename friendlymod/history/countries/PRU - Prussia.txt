@@ -2,7 +2,7 @@ capital = 549
 primary_culture = north_german
 religion = protestant
 government = absolute_monarchy
-plurality = 25.0
+plurality = 15.0
 nationalvalue = nv_might
 literacy = 0.80
 non_state_culture_literacy = 0.25
@@ -10,7 +10,7 @@ civilized = yes
 
 
 #GreaterPowers = prestige
-prestige = 50
+prestige = 65
 
 # Political reforms
 slavery = no_slavery
@@ -29,7 +29,17 @@ safety_regulations = no_safety
 health_care = no_health_care
 unemployment_subsidies = no_subsidies
 pensions = no_pensions 
-school_reforms = low_schools
+school_reforms = acceptable_schools
+
+debt_law = debtors_prisons
+penal_system = capital_punishment
+child_labor = child_labor_legal
+citizens_rights = primary_culture_only
+border_policy = open_borders
+foreign_investment = {
+	HOH = 50000
+	SWH = 15000
+}
 
 ruling_party = PRU_conservative_2
 upper_house = {

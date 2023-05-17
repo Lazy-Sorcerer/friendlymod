@@ -26,7 +26,13 @@ safety_regulations = no_safety
 health_care = no_health_care
 unemployment_subsidies = no_subsidies
 pensions = no_pensions 
-school_reforms = no_schools
+school_reforms = low_schools
+
+debt_law = debtors_prisons
+penal_system = capital_punishment
+child_labor = child_labor_legal
+citizens_rights = culture_voting_only
+border_policy = open_borders
 
 ruling_party = HOL_conservative
 upper_house = {
@@ -42,6 +48,7 @@ upper_house = {
 set_country_flag = existing_country
 set_country_flag = protestant_religion
 decision = literacy_NET
+schools = commerce_tech_school
 
 # Technologies
 post_napoleonic_thought = 1

@@ -4,7 +4,7 @@ religion = shinto
 government = absolute_monarchy
 plurality = 0.0
 nationalvalue = nv_tradition
-literacy = 0.40
+literacy = 0.3
 
 # Political reforms
 slavery = no_slavery
@@ -24,6 +24,12 @@ health_care = no_health_care
 unemployment_subsidies = no_subsidies
 pensions = no_pensions
 school_reforms = no_schools
+
+debt_law = peonage
+penal_system = capital_punishment
+child_labor = child_labor_legal
+citizens_rights = primary_culture_only
+border_policy = closed_borders
 
 ruling_party = NIP_reactionary
 upper_house = {

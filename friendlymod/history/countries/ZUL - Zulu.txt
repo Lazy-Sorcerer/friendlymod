@@ -6,8 +6,8 @@ religion = animist
 government = absolute_monarchy
 plurality = 0.0
 nationalvalue = nv_tradition
-literacy = 0.02
-non_state_culture_literacy = 0.05
+literacy = 0.01
+non_state_culture_literacy = 0.4
 
 # Political reforms
 slavery = no_slavery
@@ -27,6 +27,12 @@ health_care = no_health_care
 unemployment_subsidies = no_subsidies
 pensions = no_pensions
 school_reforms = no_schools
+
+debt_law = peonage
+penal_system = capital_punishment
+child_labor = child_labor_legal
+citizens_rights = primary_culture_only
+border_policy = open_borders
 
 ruling_party = ZUL_conservative
 upper_house = {

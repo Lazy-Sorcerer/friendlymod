@@ -28,6 +28,12 @@ unemployment_subsidies = no_subsidies
 pensions = no_pensions 
 school_reforms = no_schools
 
+debt_law = peonage
+penal_system = capital_punishment
+child_labor = child_labor_legal
+citizens_rights = all_voting_pops
+border_policy = open_borders
+
 ruling_party = SAR_reactionary
 upper_house = {
 	fascist = 0
@@ -38,7 +44,14 @@ upper_house = {
 	socialist = 0
 	communist = 0
 }
-
+foreign_investment = {
+	TUS = 10000
+	LUC = 10000
+	PAR = 10000
+	MOD = 10000
+	SIC = 10000
+	PAP = 10000
+}
 set_country_flag = existing_country
 set_country_flag = catholic_religion
 

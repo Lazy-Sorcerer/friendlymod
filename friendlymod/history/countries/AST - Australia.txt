@@ -3,14 +3,14 @@ primary_culture = british
 religion = protestant
 government = hms_government
 plurality = 0.98
-nationalvalue = nv_liberty
+nationalvalue = nv_equality
 literacy = 0.7
 civilized = yes
 
 # Political reforms
 slavery = no_slavery
 upper_house_composition = state_equal_weight
-vote_franschise = wealth_voting
+vote_franschise = universal_voting
 public_meetings = yes_meeting
 press_rights = free_press
 trade_unions = all_trade_unions
@@ -18,13 +18,19 @@ voting_system = jefferson_method
 political_parties = non_secret_ballots
 
 # Social Reforms
-wage_reform = low_minimum_wage
+wage_reform = acceptable_minimum_wage
 work_hours = ten_hours
 safety_regulations = trinket_safety
 health_care = trinket_health_care
 unemployment_subsidies = trinket_subsidies
 pensions = low_pensions 
-school_reforms = no_schools
+school_reforms = low_schools
+
+debt_law = debtors_prisons
+penal_system = capital_punishment
+child_labor = child_labor_restricted
+citizens_rights = all_voting_pops
+border_policy = quota_immigration
 
 ruling_party = AST_liberal_2
 upper_house = {

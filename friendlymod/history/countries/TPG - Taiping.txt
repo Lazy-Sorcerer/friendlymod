@@ -27,6 +27,12 @@ unemployment_subsidies = no_subsidies
 pensions = no_pensions 
 school_reforms = no_schools
 
+debt_law = peonage
+penal_system = capital_punishment
+child_labor = child_labor_legal
+citizens_rights = culture_voting_only
+border_policy = closed_borders
+
 ruling_party = TPG_reactionary
 upper_house = {
 	fascist = 0

@@ -20,13 +20,16 @@ voting_system = first_past_the_post
 political_parties = gerrymandering
 
 # Social Reforms
-wage_reform = trinket_wage
-work_hours = twelve_hours
-safety_regulations = trinket_safety
-health_care = trinket_health_care
-unemployment_subsidies = trinket_subsidies
+wage_reform = acceptable_minimum_wage
+work_hours = ten_hours
+school_reforms = low_schools
+
 pensions = no_pensions 
-school_reforms = no_schools
+debt_law = debtors_prisons
+penal_system = capital_punishment
+child_labor = child_labor_restricted
+citizens_rights = all_voting_pops
+border_policy = quota_immigration
 
 ruling_party = CAN_conservative
 upper_house = {
