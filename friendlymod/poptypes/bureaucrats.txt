@@ -5565,6 +5565,8 @@ yes_slavery = {
 					NOT = { political_parties = non_secret_ballots }
 					NOT = { political_parties = secret_ballots }
 				}
+                country = { NOT = { slavery = no_slavery } }
+                country = { debt_law = serfdom }
 				public_meetings = no_meeting
 			}
 		}
@@ -5590,17 +5592,17 @@ yes_slavery = {
 
 		modifier = {
 			factor = 1.25
-			consciousness = 7
+			consciousness = 6
 		}
 		
 		modifier = {
 			factor = 1.25
-			consciousness = 8
+			consciousness = 7
 		}
 
 		modifier = {
 			factor = 1.25
-			consciousness = 9
+			consciousness = 8
 		}
 		
 		modifier = {
@@ -5632,6 +5634,8 @@ yes_slavery = {
 					NOT = { political_parties = non_secret_ballots }
 					NOT = { political_parties = secret_ballots }
 				}
+                country = { NOT = { slavery = no_slavery } }
+                country = { debt_law = serfdom }
 				public_meetings = no_meeting
 			}
 		}
@@ -5679,4 +5683,427 @@ yes_slavery = {
 			unemployment = 0.25
 		}
 	}
+
+#######################################Child Labor
+    child_labor_restricted = {
+        factor = 1
+        modifier = {
+            factor = 0
+            OR = {
+                NOT = { is_next_reform = child_labor_restricted }
+                country = {    civilized = no }
+                NOT = { is_ideology_enabled = socialist }
+                luxury_needs = 1.0
+                NOT = { life_needs = 0.5 }
+                NOT = { consciousness = 3 }
+            }
+        }
+
+        modifier = {
+            factor = 1.25
+            literacy = 0.30
+        }
+
+        modifier = {
+            factor = 1.25
+            literacy = 0.40
+        }
+
+        modifier = {
+            factor = 1.25
+            literacy = 0.50
+        }
+
+        modifier = {
+            factor = 1.25
+            consciousness = 4
+        }
+        modifier = {
+            factor = 1.25
+            consciousness = 5
+        }
+        modifier = {
+            factor = 1.25
+            consciousness = 6
+        }
+        modifier = {
+            factor = 1.25
+            consciousness = 7
+        }
+    }
+
+    child_labor_illegal = {
+        factor = 1
+        modifier = {
+            factor = 0
+            OR = {
+                NOT = { is_next_reform = child_labor_illegal }
+                NOT = { is_ideology_enabled = socialist }
+                luxury_needs =  1.0
+                country = {    civilized = no }
+                NOT = { life_needs = 0.7 }
+                NOT = { consciousness = 5 }
+                AND = {
+                    NOT = { vote_franschise = universal_weighted_voting }
+                    NOT = { vote_franschise = universal_voting }
+                }
+                NOT = { political_parties = secret_ballots }
+                NOT = { press_rights = free_press }
+                public_meetings = no_meeting
+            }
+        }
+
+
+        modifier = {
+            factor = 1.25
+            literacy = 0.60
+        }
+
+        modifier = {
+            factor = 1.25
+            literacy = 0.70
+        }
+
+        modifier = {
+            factor = 1.25
+            literacy = 0.80
+        }
+
+        modifier = {
+            factor = 1.25
+            consciousness = 6
+        }
+        modifier = {
+            factor = 1.25
+            consciousness = 7
+        }
+        modifier = {
+            factor = 1.25
+            consciousness = 8
+        }
+        modifier = {
+            factor = 1.25
+            consciousness = 9
+        }
+    }
+
+#######################################Debt Law
+peonage = {
+    factor = 1.2
+
+    modifier = {
+        factor = 0
+        OR = {
+            NOT = { is_next_reform = peonage }
+            country = {    civilized = no }
+            luxury_needs =  1.0
+            NOT = { consciousness = 6 }
+        }
+    }
+
+    modifier = {
+            factor = 0.95
+			nationalvalue = nv_might
+        }
+
+    modifier = {
+        factor = 1.2
+        OR = {
+            pop_majority_ideology = liberal
+            pop_majority_ideology = socialist
+        }
+    }
+
+    modifier = {
+            factor = 1.25
+            consciousness = 8
+        }
+
+    modifier = {
+            factor = 1.25
+            consciousness = 9
+        }
+    modifier = {
+            factor = 1.2
+            OR = {
+                nationalvalue = nv_equality
+                nationalvalue = nv_liberty
+            }
+        }
+
+    modifier = {
+            factor = 1.2
+            literacy = 0.6
+        }
+    modifier = {
+            factor = 1.4
+            literacy = 0.7
+        }
+    modifier = {
+            factor = 1.6
+            literacy = 0.8
+        }
+    }
+
+debtors_prisons = {
+    factor = 1
+
+    modifier = {
+        factor = 0
+        OR = {
+            NOT = { is_next_reform = debtors_prisons }
+            country = {    civilized = no }
+            luxury_needs =  1.0
+            NOT = { life_needs = 0.4 }
+            NOT = { consciousness = 6 }
+        }
+    }
+
+    modifier = {
+        factor = 1.25
+        OR = {
+            pop_majority_ideology = liberal
+            pop_majority_ideology = socialist
+        }
+    }
+
+
+    modifier = {
+        factor = 1.25
+        consciousness = 8
+    }
+
+    modifier = {
+        factor = 1.25
+        consciousness = 9
+    }
+
+    modifier = {
+        factor = 1.25
+        OR = {
+            nationalvalue = nv_equality
+            nationalvalue = nv_liberty
+        }
+    }
+    modifier = {
+        factor = 1.2
+        literacy = 0.6
+    }
+    modifier = {
+        factor = 1.4
+        literacy = 0.7
+    }
+    modifier = {
+        factor = 1.6
+        literacy = 0.8
+    }
+}
+
+bankruptcy = {
+    factor = 1
+
+    modifier = {
+        factor = 0
+        OR = {
+            NOT = { is_next_reform = bankruptcy }
+            country = {    civilized = no }
+            luxury_needs =  1.0
+            NOT = { consciousness = 6 }
+            NOT = { everyday_needs = 0.4 }
+            NOT = { vote_franschise = universal_voting }
+            NOT = { press_rights = free_press }
+            NOT = { political_parties = secret_ballots }
+            NOT = { wage_reform = good_minimum_wage }
+            public_meetings = no_meeting
+            NOT = { country = { has_country_flag = central_bank_instituted } }
+            state_scope = { is_colonial = yes }
+            NOT = { is_ideology_enabled = socialist }
+            NOT = { literacy = 0.7 }
+        }
+    }
+
+    modifier = {
+        factor = 1.25
+        pop_majority_ideology = liberal
+    }
+
+    modifier = {
+        factor = 1.25
+        consciousness = 7
+    }
+    modifier = {
+        factor = 1.25
+        consciousness = 8
+    }
+
+    modifier = {
+        factor = 1.25
+        consciousness = 9
+    }
+    modifier = {
+        factor = 1.1
+        OR = {
+            nationalvalue = nv_equality
+            nationalvalue = nv_liberty
+        }
+    }
+    modifier = {
+        factor = 1.2
+        literacy = 0.9
+    }
+}
+#######################################Penal System
+
+incarceration = {
+    factor = 1
+
+    modifier = {
+        factor = 0
+            OR = {
+                NOT = { is_next_reform = incarceration }
+                country = {    civilized = no }
+                NOT = { is_ideology_enabled = socialist }
+                luxury_needs =  1.0
+                NOT = { consciousness = 7 }
+                AND = {
+                    NOT = { vote_franschise = universal_weighted_voting }
+                    NOT = { vote_franschise = universal_voting }
+                }
+                NOT = { press_rights = free_press }
+                NOT = { political_parties = secret_ballots }
+                public_meetings = no_meeting
+                NOT = { life_needs = 1.0 }
+        }
+    }
+
+    modifier = {
+        factor = 1.2
+        OR = {
+            pop_majority_ideology = liberal
+            pop_majority_ideology = socialist
+        }
+    }
+
+    modifier = {
+        factor = 1.2
+        consciousness = 7
+        state_scope = { is_colonial = no }
+    }
+
+    modifier = {
+        factor = 1.2
+        consciousness = 8
+        state_scope = { is_colonial = no }
+    }
+
+    modifier = {
+        factor = 1.4
+        consciousness = 7
+        state_scope = { is_colonial = yes }
+    }
+
+    modifier = {
+        factor = 1.4
+        consciousness = 8
+        state_scope = { is_colonial = yes }
+    }
+
+    modifier = {
+        factor = 1.2
+        consciousness = 9
+    }
+
+    modifier = {
+        factor = 1.3
+        state_scope = { is_colonial = yes }
+    }
+
+    modifier = {
+        factor = 1.2
+            OR = {
+                nationalvalue = nv_equality
+                nationalvalue = nv_liberty
+            }
+        }
+
+    modifier = {
+        factor = 1.3
+        literacy = 0.6
+        state_scope = { is_colonial = yes }
+    }
+
+    modifier = {
+        factor = 1.5
+        literacy = 0.7
+        state_scope = { is_colonial = yes }
+    }
+
+    modifier = {
+        factor = 1.6
+        literacy = 0.8
+    }
+}
+
+rehabilitation = {
+    factor = 1
+
+    modifier = {
+        factor = 0
+            OR = {
+                NOT = { is_next_reform = rehabilitation }
+                country = {    civilized = no }
+                NOT = { is_ideology_enabled = socialist }
+                NOT = { consciousness = 7 }
+                NOT = { literacy = 0.8 }
+                NOT = { vote_franschise = universal_voting }
+                NOT = { press_rights = free_press }
+                NOT = { political_parties = secret_ballots }
+                NOT = { safety_regulations = good_safety }
+                NOT = { work_hours = eight_hours }
+                NOT = { wage_reform = good_minimum_wage }
+                NOT = { unemployment_subsidies = good_subsidies }
+                NOT = { pensions = good_pensions }
+                NOT = { school_reforms = good_schools }
+                NOT = { child_labor = child_labor_illegal }
+                public_meetings = no_meeting
+                state_scope = { is_colonial = yes }
+                NOT = { everyday_needs = 0.4 }
+        }
+    }
+
+    modifier = {
+        factor = 1.2
+        OR = {
+            pop_majority_ideology = liberal
+            pop_majority_ideology = socialist
+        }
+    }
+
+    modifier = {
+        factor = 1.2
+        consciousness = 7
+    }
+
+    modifier = {
+        factor = 1.2
+        consciousness = 8
+    }
+
+    modifier = {
+        factor = 1.2
+        consciousness = 9
+    }
+
+    modifier = {
+        factor = 1.2
+        OR = {
+            nationalvalue = nv_equality
+            nationalvalue = nv_liberty
+        }
+    }
+    modifier = {
+        factor = 1.6
+        literacy = 0.9
+    }
+}
 }
