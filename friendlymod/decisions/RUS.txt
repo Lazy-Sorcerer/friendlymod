@@ -3,36 +3,44 @@ political_decisions = {
 		potential = {
 			tag = RUS
 			has_country_flag = serfdom_not_abolished
-			#government = absolute_monarchy
+			debt_law = serfdom
 		}
 		allow = {
 			OR = {
-				AND = {
-					upper_house = {
-						ideology = liberal
-						value = 0.3
-					}
-					average_consciousness = 3
-				}	
-				AND = {
-					ruling_party_ideology = liberal
-					average_consciousness = 4
-				}
+			AND = {
+				average_consciousness = 5
+				average_militancy = 5
+			}
+			AND = {
+				year = 1870
+				has_recently_lost_war = yes
+				average_consciousness = 2
 				average_militancy = 4
+				}
+			AND = {
+				year = 1880
+				has_recently_lost_war = yes
+				average_consciousness = 1
+				average_militancy = 3
+				}
 			}
 		}
 		effect = {
-			farmers = {
-				militancy = -2
-				consciousness = 1
-			}
-			labourers = {
-				militancy = -2
-				consciousness = 1
-			}
-			badboy = -4
+		any_pop = {
+            consciousness = -3
+			militancy = -3
+		}
+		farmers = {
+			militancy = -3
+			consciousness = -3
+		}
+		labourers = {
+			militancy = -3
+			consciousness = -3
+		}
 			years_of_research = 0.05
 			clr_country_flag = serfdom_not_abolished
+            political_reform = peonage
 		}
 	}
 	
