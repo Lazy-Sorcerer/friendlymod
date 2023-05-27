@@ -508,7 +508,7 @@ political_decisions = {
 		allow = {
 			war = no
 			state_n_government = 1
-			plurality = 35
+			plurality = 40
 		}
 		
 		effect = {
@@ -523,6 +523,33 @@ political_decisions = {
 					political_reform = harassment
 				}
 			}
+			random_owned = {
+				limit = {
+					owner = { border_policy = closed_borders }
+				}
+				owner = {
+					political_reform = open_borders
+				}
+			}
+			
+			random_owned = {
+				limit = {
+					owner = { debt_law = peonage }
+				}
+				owner = {
+					political_reform = debtors_prisons
+				}
+			}
+			
+			random_owned = {
+				limit = {
+					owner = { debt_law = serfdom }
+				}
+				owner = {
+					political_reform = debtors_prisons
+				}
+			}
+			
 			government = prussian_constitutionalism
 			any_pop = {
 				militancy = -2
@@ -530,7 +557,13 @@ political_decisions = {
 		}
 		
 		ai_will_do = {
-			factor = 1
+			factor = 0
+			modifier = {
+				factor = 1
+				OR = {
+					average_militancy = 3
+				}
+			}
 		}
 	}
 	
