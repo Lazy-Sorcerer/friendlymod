@@ -1,0 +1,24 @@
+country_event = {
+	id = 188242
+	title = "Border Control"
+	desc = "Due to the recent political changes our strict border control is no longer possible."
+	picture = "statue_of_liberty"
+	
+	trigger = {
+		border_policy = closed_borders
+		OR = {
+			government = democracy
+			government = hms_government
+            government = prussian_constitutionalism
+		}
+	}
+
+	mean_time_to_happen = {
+		days = 30
+	}
+
+	option = {
+		name = "I understand."
+		political_reform = open_borders
+	}
+}
